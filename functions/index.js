@@ -12,7 +12,6 @@ exports.detectEvilUsers = functions.firestore
         const filter = new Filter();
         const { text, uid } = doc.data(); 
 
-
         if (filter.isProfane(text)) {
 
             const cleaned = filter.clean(text);
